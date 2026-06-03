@@ -1,0 +1,95 @@
+:root {
+  --page-bg: #eef2f6;
+  --panel-bg: #ffffff;
+  --text-color: #1f2933;
+  --muted-color: #687789;
+  --accent-color: #0f766e;
+  --border-color: #d8e0e8;
+
+  /* Sua cac gia tri nay de doi bo cuc nhanh. */
+  --content-width: 980px;
+  --page-padding: 32px;
+  --panel-padding: 34px;
+  --text-size: 16px;
+  --line-height: 1.75;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text-color);
+  background:
+    linear-gradient(180deg, rgba(15, 118, 110, 0.08), transparent 280px),
+    var(--page-bg);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+.page {
+  width: min(100%, calc(var(--content-width) + (var(--page-padding) * 2)));
+  margin: 0 auto;
+  padding: var(--page-padding);
+}
+
+.text-panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 18px 50px rgba(31, 41, 51, 0.08);
+  overflow: hidden;
+}
+
+.page-header {
+  padding: var(--panel-padding);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--accent-color);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(30px, 5vw, 46px);
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.intro {
+  max-width: 620px;
+  margin: 14px 0 0;
+  color: var(--muted-color);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.content-text {
+  margin: 0;
+  padding: var(--panel-padding);
+  color: var(--text-color);
+  font-family:
+    "Segoe UI", Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, sans-serif;
+  font-size: var(--text-size);
+  line-height: var(--line-height);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --page-padding: 14px;
+    --panel-padding: 20px;
+    --text-size: 15px;
+  }
+}
