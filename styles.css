@@ -73,6 +73,42 @@ h1 {
   line-height: 1.6;
 }
 
+.jump-nav {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px var(--panel-padding);
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 10px 24px rgba(31, 41, 51, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.jump-nav a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--accent-color);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.jump-nav a:active {
+  transform: translateY(1px);
+}
+
+.jump-target {
+  scroll-margin-top: 96px;
+}
+
 .content-text {
   margin: 0;
   padding: var(--panel-padding);
@@ -91,5 +127,14 @@ h1 {
     --page-padding: 14px;
     --panel-padding: 20px;
     --text-size: 15px;
+  }
+
+  .jump-nav {
+    gap: 8px;
+  }
+
+  .jump-nav a {
+    flex: 1 1 calc(50% - 8px);
+    padding: 0 10px;
   }
 }
